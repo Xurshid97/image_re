@@ -383,6 +383,14 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <section className={styles.seoIntro}>
+          <h1>Image Resizer Online</h1>
+          <p>
+            Resize images in pixels and export for LinkedIn cover, Instagram post/story, Facebook cover, and YouTube
+            thumbnail.
+          </p>
+        </section>
+
         <header className={styles.toolbar}>
           <label className={styles.primaryButton}>
             Upload
