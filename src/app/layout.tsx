@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Sora } from "next/font/google";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const sora = Sora({
@@ -7,7 +8,7 @@ const sora = Sora({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
+const siteUrl = getSiteUrl();
 const googleVerification =
   process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "pTKSg1qmqvTMplN5TIVOh12OCkDocGVgzh7cJ-APcX8";
 
