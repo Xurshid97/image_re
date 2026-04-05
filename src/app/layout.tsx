@@ -35,6 +35,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   openGraph: {
     type: "website",
     url: "/",
@@ -43,12 +48,21 @@ export const metadata: Metadata = {
       "Resize images for social media sizes in seconds. Works for LinkedIn cover, Instagram, Facebook, and YouTube.",
     siteName: "Image Resizer Online",
     locale: "en_US",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 1200,
+        alt: "Image Resizer Online logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Image Resizer Online",
     description:
       "Resize images by width and height, apply social presets, and download high-quality output.",
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
