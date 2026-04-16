@@ -1,0 +1,160 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+  padding: 16px;
+}
+
+.main {
+  width: min(1140px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+}
+
+.hero,
+.controls,
+.panel {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  background: #fff;
+  padding: 12px;
+}
+
+.hero h1 {
+  font-size: 1.12rem;
+}
+
+.hero p {
+  margin-top: 6px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.uploadBtn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 9px 11px;
+  font-weight: 600;
+}
+
+.uploadBtn input {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.grid label {
+  font-size: 0.86rem;
+  color: #444;
+  display: grid;
+  gap: 5px;
+}
+
+.grid select {
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: #fff;
+  color: #111;
+}
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.primary,
+.secondary {
+  border-radius: 8px;
+  border: 1px solid #d8d8d8;
+  background: #fff;
+  color: #111;
+  font-size: 0.9rem;
+  padding: 9px 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+}
+
+.primary:disabled,
+.secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.status {
+  margin-top: 8px;
+  font-size: 0.88rem;
+  color: #555;
+}
+
+.preview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.panel h2 {
+  font-size: 0.95rem;
+}
+
+.image {
+  margin-top: 8px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #fafafa;
+}
+
+.panel p {
+  margin-top: 8px;
+  font-size: 0.86rem;
+  color: #555;
+}
+
+.empty {
+  margin-top: 8px;
+}
+
+@media (max-width: 780px) {
+  .page {
+    padding: 12px;
+  }
+
+  .preview {
+    grid-template-columns: 1fr;
+  }
+}

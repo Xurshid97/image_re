@@ -16,6 +16,24 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## External Image Enhancement API
+
+Image enhancement now calls an external backend API. Configure this in your environment:
+
+```bash
+NEXT_PUBLIC_IMAGE_ENHANCE_API_URL=https://your-python-api.example.com/enhance
+```
+
+The frontend sends a `multipart/form-data` request with fields:
+
+- `image` (file)
+- `format` (`jpeg`, `png`, or `webp`)
+- `quality` (70-100)
+- `strength` (0-100)
+- `denoise` (0-100)
+
+Your API should return the enhanced image as binary response.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
